@@ -3,7 +3,7 @@
 
     var controller = null;
 
-    $.fn.ScrollMagic = function(options) {
+    $.fn.scrollmagic = function(options) {
         var scenes = [];
         this.each(function(i, element) {
             scenes = scenes.concat(createMultipleScenes(element, options));
@@ -11,13 +11,10 @@
         return scenes.length == 1 ? scenes[0] : scenes;
     };
 
-    $.ScrollMagic = {
+    $.scrollmagic = {
         getController: getController,
         destroyController: destroyController
     };
-
-    $.fn.scrollmagic = $.fn.ScrollMagic;
-    $.scrollmagic = $.ScrollMagic;
 
     function getController() {
         if (controller == null) {
@@ -166,8 +163,8 @@
     }
 
     $(function() {
-
-        $("[data-scrollmagic]").ScrollMagic();
+        
+        $("[data-scrollmagic]").scrollmagic();
 
     });
 

@@ -3,16 +3,16 @@ ScrollMagic data attribute shortcuts
 
 This plugin aims to make ScrollMagic development more agile, by providing ways of creating ScrollMagic scenes via data attributes.
 
-#Usage
+##Usage
 
-## Pinning
+### Pinning
 
 ```html
 <div data-scrollmagic='{"pin":true,"triggerHook":0,"duration":"100vh"}'></div>
 <div data-scrollmagic='{"pin":{pushFollowers:true,classes:"pinned"},"triggerHook":0,"duration":"100vh"}'></div>
 ```
 
-## Tweening
+### Tweening
 
 ```html
 <!-- fade-in single scene -->
@@ -22,31 +22,31 @@ This plugin aims to make ScrollMagic development more agile, by providing ways o
 <div data-scrollmagic='[{"opacity":1,"triggerElement":"#screen-text-1","triggerHook":0.25,"duration":150},{"opacity":0,"triggerElement":"#screen-text-2","triggerHook":1,"duration":150}]'></div>
 ```
 
-## Class Toggle
+### Class Toggle
 
 ```html
 <div data-scrollmagic='{"class":"active","triggerHook":0,"duration":"100vh"}'></div>
 <div data-scrollmagic='{"class":{"classes":"active","toggle":true},"triggerHook":0,"duration":"100vh"}'></div>
 ```
 
-## Options
+### Options
 
 Same options as for ScrollMagic Scene.
 
-### duration
+#### duration
 **Type:** number or string (percentage or viewport units)
 
-### offset
+#### offset
 **Type:** number
 
-### triggerElement
+#### triggerElement
 **Type:** string or object
 
-### triggerHook
+#### triggerHook
 **Type:** string or number
 
-### reverse
+#### reverse
 **Type:** boolean
 
-### loglevel
+#### loglevel
 **Type:** number

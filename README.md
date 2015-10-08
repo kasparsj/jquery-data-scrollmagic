@@ -1,4 +1,4 @@
-# jquery-ScrollMagic
+# jquery-scrollmagic
 ScrollMagic data attribute shortcuts
 
 This plugin aims to make ScrollMagic development more agile, by providing ways of creating ScrollMagic scenes via data attributes.

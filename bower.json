@@ -1,12 +1,12 @@
 {
-  "name": "jquery-ScrollMagic",
+  "name": "jquery-scrollmagic",
   "version": "0.0.0",
-  "homepage": "https://github.com/kasparsj/jquery-ScrollMagic",
+  "homepage": "https://github.com/kasparsj/jquery-scrollmagic",
   "authors": [
     "Kaspars <kasparsj@gmail.com>"
   ],
   "description": "ScrollMagic data attribute shortcuts",
-  "main": "jquery.ScrollMagic.js",
+  "main": "jquery.scrollmagic.js",
   "dependencies": {
     "scrollmagic": "~2.0.5",
     "jquery": "*"

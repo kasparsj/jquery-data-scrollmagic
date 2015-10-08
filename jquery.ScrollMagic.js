@@ -16,6 +16,9 @@
         destroyController: destroyController
     };
 
+    $.fn.scrollmagic = $.fn.ScrollMagic;
+    $.scrollmagic = $.ScrollMagic;
+
     function getController() {
         if (controller == null) {
             controller = new ScrollMagic.Controller();

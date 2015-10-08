@@ -129,7 +129,7 @@
                     return $(triggerElement).outerHeight(true) * perc;
                 }
             }
-            else if (val.match(/^(\.|\d)*\d+v$/)) {
+            else if (val.match(/^(\.|\d)*\d+vh$/)) {
                 // make use of default percentage implementation, which refers to controller height
                 val = val.slice(0, -1) + "%";
             }

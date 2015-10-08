@@ -28,3 +28,25 @@ This plugin aims to make ScrollMagic development more agile, by providing ways o
 <div data-scrollmagic='{"class":"active","triggerHook":0,"duration":"100vh"}'></div>
 <div data-scrollmagic='{"class":{"classes":"active","toggle":true},"triggerHook":0,"duration":"100vh"}'></div>
 ```
+
+## Options
+
+Same options as for ScrollMagic Scene.
+
+### duration
+**Type:** number or string (percentage or viewport units)
+
+### offset
+**Type:** number
+
+### triggerElement
+**Type:** string or object
+
+### triggerHook
+**Type:** string or number
+
+### reverse
+**Type:** boolean
+
+### loglevel
+**Type:** number

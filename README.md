@@ -23,8 +23,8 @@ This plugin aims to make ScrollMagic development more agile, by providing ways o
 ```
 
 ## Class Toggle
+
+```html
 <div data-scrollmagic='{"class":"active","triggerHook":0,"duration":"100vh"}'></div>
 <div data-scrollmagic='{"class":{"classes":"active","toggle":true},"triggerHook":0,"duration":"100vh"}'></div>
-```html
-
 ```

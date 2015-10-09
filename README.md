@@ -65,7 +65,9 @@ Same options as for ScrollMagic Scene.
 #### duration
 **Type:** number or string (percentage or viewport units)  
 **Default:** automatically calculated to when the scene exits the viewport  
-Duration percentage is translated a bit different here, percents refer to triggerElement's height or width respectively, and viewport units (vh, vw) refer to viewport height and width.
+Notice, that this is different from ScrollMagic.  
+Also a percentage value will be translated refering to triggerElement's height or width respectively.  
+Use viewport units (vh, vw) refer to viewport height and width.
 
 #### offset
 **Type:** number  

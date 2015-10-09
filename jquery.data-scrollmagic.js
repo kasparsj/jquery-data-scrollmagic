@@ -87,11 +87,14 @@
                 return (this.triggerPosition() + $triggerElement.outerHeight(true)) - this.scrollOffset();
             };
         }
-        var scene = new ScrollMagic.Scene({
+        var sceneOptions = {
             triggerElement: triggerElement,
-            triggerHook: options.triggerHook,
             duration: options.duration
-        });
+        };
+        if (typeof options.triggerHook != "undefined") {
+            sceneOptions.triggerHook = options.triggerHook;
+        }
+        var scene = new ScrollMagic.Scene(sceneOptions);
         if (options.events) {
             addSceneEvents(scene, options.events);
         }
@@ -126,7 +129,7 @@
     }
 
     $(function() {
-        
+
         $("[data-scrollmagic]").scrollmagic();
 
     });

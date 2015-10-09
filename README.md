@@ -48,7 +48,7 @@ Then add the jquery-scrollmagic plugin:
 <div data-scrollmagic='{"class":"active","duration":"100%"}'></div>
 
 <!-- toggle class "active", while the element is in the center of the viewport -->
-<div class="active" data-scrollmagic='{"class":{"classes":"active","toggle":true},"duration":"100%"}'></div>
+<div class="inactive" data-scrollmagic='{"class":{"classes":"inactive","toggle":true},"duration":"100%"}'></div>
 ```
 
 ### Mixing features

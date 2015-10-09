@@ -80,7 +80,7 @@
         }
         var scene = new ScrollMagic.Scene({
             triggerElement: triggerElement,
-            triggerHook: options.triggerHook || 0,
+            triggerHook: options.triggerHook,
             duration: parseDuration(options.duration || 0, triggerElement)
         });
         if (options.events) {

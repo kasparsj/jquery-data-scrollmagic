@@ -63,7 +63,8 @@ Then add the jquery-scrollmagic plugin:
 Same options as for ScrollMagic Scene.
 
 #### duration
-**Type:** number or string (percentage or viewport units)
+**Type:** number or string (percentage or viewport units)  
+Duration percentage is translated a bit different here, percents refer to triggerElement's height or width respectively, and viewport units (vh, vw) refer to viewport height and width.
 
 #### offset
 **Type:** number

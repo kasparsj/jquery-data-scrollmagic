@@ -87,14 +87,11 @@
                 return (this.triggerPosition() + $triggerElement.outerHeight(true)) - this.scrollOffset();
             };
         }
-        var sceneOptions = {
+        var scene = new ScrollMagic.Scene({
             triggerElement: triggerElement,
+            triggerHook: options.triggerHook || 0,
             duration: options.duration
-        };
-        if (typeof options.triggerHook != "undefined") {
-            sceneOptions.triggerHook = options.triggerHook;
-        }
-        var scene = new ScrollMagic.Scene(sceneOptions);
+        });
         if (options.events) {
             addSceneEvents(scene, options.events);
         }

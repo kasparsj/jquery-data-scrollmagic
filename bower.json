@@ -8,7 +8,7 @@
   "description": "ScrollMagic data attribute shortcuts",
   "main": "jquery.scrollmagic.js",
   "dependencies": {
-    "scrollmagic": "~2.0.5",
+    "scrollmagic": "2.*",
     "jquery": "*"
   },
   "keywords": [

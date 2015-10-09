@@ -57,47 +57,20 @@
         }
         var scene = createScene(element, options);
         if (options.pin) {
-            addSceneEvents(scene, {
-                "enter leave": function(e) {
-                    var method = e.type == "enter" ? "addClass" : "removeClass";
-                    $(element)[method](options.pin.classes || "sm-pinned");
-                }
-            });
-            scene.setPin(element, options.pin);
+            var pinEl = options.pin.element || element;
+            scene.setPin(pinEl, options.pin);
         }
-        var tween = copyProperties(["x", "y", "z", "scale", "rotate", "opacity"], options, options.tween || {});
-        if (!isEmpty(tween)) {
-            scene.setTween(element, tween);
+        if (options.tween) {
+            var tweenEl = options.tween.element || element;
+            scene.setTween(tweenEl, options.tween);
         }
         if (options.class) {
             if (typeof options.class != "object") {
                 options.class = {classes: options.class};
             }
-            scene.setClassToggle(options.class.element || element, options.class.classes, options.class.toggle);
+            var classEl = options.class.element || element;
+            scene.setClassToggle(classEl, options.class.classes, options.class.toggle);
         }
-        // better use bootstrap's scrollspy
-        //if (options.navbar) {
-        //    var itemSelector = options.itemSelector || "ul.navbar-nav > li",
-        //        activeSelector = options.activeSelector || "[href=#"+$(element).attr("id")+"]",
-        //        classes = options.classes || "active";
-        //    if (typeof(options.duration) == "undefined") {
-        //        options.duration = "100%";
-        //    }
-        //    options.events = $.extend({
-        //        "leave enter": function(e) {
-        //            var $navbar = $(options.element);
-        //            if (e.type != "leave" || $navbar.find("."+classes.split(" ")[0]+" "+activeSelector).length) {
-        //                var $items = $navbar.find(itemSelector);
-        //                $items.removeClass(classes);
-        //                if (e.type == "enter") {
-        //                    $items.filter(function() {
-        //                        return $(this).find(activeSelector).length > 0;
-        //                    }).addClass(classes);
-        //                }
-        //            }
-        //        }
-        //    }, options.events || {});
-        //}
     }
 
     function createScene(element, options) {
@@ -141,25 +114,6 @@
         for (var event in events) {
             scene.on(event, events[event]);
         }
-    }
-
-    function copyProperties(props, srcObj, dstObj) {
-        for (var i=0; i<props.length; i++) {
-            if (typeof srcObj[props[i]] != "undefined") {
-                dstObj[props[i]] = srcObj[props[i]];
-            }
-        }
-        return dstObj;
-    }
-
-    function isEmpty(obj) {
-        if (obj == null) return true;
-        if (obj.length > 0)    return false;
-        if (obj.length === 0)  return true;
-        for (var key in obj) {
-            if (hasOwnProperty.call(obj, key)) return false;
-        }
-        return true;
     }
 
     $(function() {

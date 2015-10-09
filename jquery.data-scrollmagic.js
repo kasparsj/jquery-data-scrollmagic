@@ -78,10 +78,19 @@
         if (typeof triggerElement == "function") {
             triggerElement = triggerElement.call(element);
         }
+        if (typeof options.duration != "undefined") {
+            options.duration = parseDuration(options.duration, triggerElement);
+        }
+        else {
+            options.duration = function() {
+                var $triggerElement = $(this.triggerElement());
+                return (this.triggerPosition() + $triggerElement.outerHeight(true)) - this.scrollOffset();
+            };
+        }
         var scene = new ScrollMagic.Scene({
             triggerElement: triggerElement,
             triggerHook: options.triggerHook,
-            duration: parseDuration(options.duration || 0, triggerElement)
+            duration: options.duration
         });
         if (options.events) {
             addSceneEvents(scene, options.events);

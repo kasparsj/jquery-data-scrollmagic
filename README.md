@@ -1,4 +1,4 @@
-# jquery-scrollmagic
+# [data-scrollmagic]
 ScrollMagic data attribute shortcuts
 
 This plugin aims to make ScrollMagic development more agile, by providing ways of creating ScrollMagic scenes via data attributes.
@@ -6,17 +6,17 @@ This plugin aims to make ScrollMagic development more agile, by providing ways o
 ## Availability
 
 ```bash
-bower install jquery-scrollmagic
+bower install jquery-data-scrollmagic
 ```
 
 ## Installation
 
 Install ScrollMagic as per: https://github.com/janpaepke/ScrollMagic#installation
 
-Then add the jquery-scrollmagic plugin:
+Then add the jquery-data-scrollmagic plugin:
 
 ```html
-<script src="bower_components/jquery-scrollmagic/jquery.scrollmagic.min.js"></script>
+<script src="bower_components/jquery-data-scrollmagic/jquery.data-scrollmagic.min.js"></script>
 ```
 
 ## Usage

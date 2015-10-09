@@ -70,7 +70,7 @@ Duration percentage is translated a bit different here, percents refer to trigge
 **Type:** number
 
 #### triggerElement
-**Type:** string or object
+**Type:** string or object or function
 
 #### triggerHook
 **Type:** string or number
